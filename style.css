@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "Digital Clock";
+    src: url("clock-font/digital-7/digital-7.ttf");
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #F8E6A0
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+
+
+.start,
+.start *,
+.start :after,
+.start :before,
+.start:after,
+.start:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+
+.start {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-color: #000;
+    background-image: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+    padding: 0;
+}
+
+.start:disabled {
+    cursor: default;
+}
+
+.start:-moz-focusring {
+    outline: auto;
+}
+
+.start svg {
+    display: block;
+    vertical-align: middle;
+}
+
+.start [hidden] {
+    display: none;
+}
+
+.start {
+    box-sizing: border-box;
+    display: block;
+    font-weight: 900;
+    padding: 1.8rem 5rem;
+    position: relative;
+    text-transform: uppercase;
+    background: none;
+}
+
+.start .content,
+.start .depth,
+.start .shadow {
+    transition: transform 0.2s;
+}
+
+.start .content {
+    background: #fff;
+    color: #000;
+    display: grid;
+    height: 84%;
+    left: 0;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.start .depth {
+    background: #ccc;
+    height: 10%;
+    top: 84%;
+}
+
+.start .depth,
+.start .shadow {
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.start .shadow {
+    background: #777;
+    height: 6%;
+    top: 94%;
+}
+
+.start:hover .content {
+    transform: translateY(4%);
+}
+
+.start:hover .shadow {
+    transform: translateY(-20%);
+}
+
+.start:active .content {
+    transform: translateY(8%);
+}
+
+.start:active .shadow {
+    transform: translateY(-30%);
+}
+
+
+input {
+    margin: 5px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+
+
+#timerDisplay {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: 'Digital Clock';
+}
